@@ -1,9 +1,11 @@
 import Avatar from './components/Avatar'
 import React from 'react'
 function App() {
-  return <Avatar />
+  return (
+    <Avatar name="John Doe" image={undefined} fontStyles={{ color: 'red' }} />
+  )
 }
-
+//https://placehold.co/400
 export default App
 // JSX Rules
 // it must have one single root element per component
