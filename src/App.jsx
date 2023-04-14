@@ -1,13 +1,28 @@
-import Avatar from './components/Avatar'
 import React from 'react'
+import Testimonials from './components/Testimonials'
+
+const users = [
+  {
+    name: 'John Doe',
+    profileImage: { src: 'https://picsum.photos/200/300' },
+    testimonial:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, quisquam.'
+  },
+  {
+    name: 'William Doe',
+    profileImage: { src: 'https://picsum.photos/200/300' },
+    testimonial:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, quisquam.'
+  },
+  {
+    name: 'Johan Doe',
+    profileImage: { src: 'https://picsum.photos/200/300' },
+    testimonial:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, quisquam.'
+  }
+]
 function App() {
-  return (
-    <Avatar
-      name="John Doe"
-      imageSrc={'https://picsum.photos/200/300'}
-      fontStyles={{ color: 'red' }}
-    />
-  )
+  return <Testimonials users={users} />
 }
 //https://placehold.co/400
 export default App
