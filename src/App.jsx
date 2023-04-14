@@ -2,7 +2,11 @@ import Avatar from './components/Avatar'
 import React from 'react'
 function App() {
   return (
-    <Avatar name="John Doe" image={undefined} fontStyles={{ color: 'red' }} />
+    <Avatar
+      name="John Doe"
+      imageSrc={'https://picsum.photos/200/300'}
+      fontStyles={{ color: 'red' }}
+    />
   )
 }
 //https://placehold.co/400

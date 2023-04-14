@@ -1,21 +1,14 @@
 import './avatar.styles.css'
 
+import Image from '../Image'
 import Initials from '../Initials'
 import React from 'react' // not mandatory
 
-const spanStyles = {
-  fontSize: '1.25rem'
-}
-
-function Avatar({ name, image, fontStyles }) {
-  const hasImage = !!image
+function Avatar({ name, imageSrc, fontStyles }) {
+  const hasImage = !!imageSrc
   return (
     <div className="avatar__container">
-      {hasImage ? (
-        <img className="avatar__image" src={image} alt={'profile image'} />
-      ) : (
-        <Initials userName={name} />
-      )}
+      {hasImage ? <Image src={imageSrc} /> : <Initials userName={name} />}
       <span className="avatar__name">{name}</span>
     </div>
   )
