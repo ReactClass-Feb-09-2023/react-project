@@ -6,20 +6,22 @@ import Avatar from '../Avatar'
 
 function Testimonial({ user }) {
   const { name, profileImage, testimonial } = user
-  const [containerStyles, setContainerStyles] = useState('')
+  const [isHidden, setIsHidden] = useState(false)
 
   const handleOnClick = () => {
-    setContainerStyles('hide')
+    setIsHidden(true)
   }
 
   return (
-    <div className={`testimonial__container ${containerStyles}`}>
-      <Avatar name={name} imageSrc={profileImage.src} />
-      <p className="testimonial__text">{testimonial}</p>
-      <button onClick={handleOnClick} className="testimonial__hideBtn">
-        Hide
-      </button>
-    </div>
+    !isHidden && (
+      <div className={`testimonial__container`}>
+        <Avatar name={name} imageSrc={profileImage.src} />
+        <p className="testimonial__text">{testimonial}</p>
+        <button onClick={handleOnClick} className="testimonial__hideBtn">
+          Hide
+        </button>
+      </div>
+    )
   )
 }
 
